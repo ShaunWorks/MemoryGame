@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import memImages from './images.json'
-import MemoryCard from './components/MemoryCard'
+import CardContainer from './components/CardContainer'
+import NavBar from './components/NavBar'
 import './App.css';
 
 import shuffle from 'lodash.shuffle'
@@ -8,7 +9,10 @@ import shuffle from 'lodash.shuffle'
 class App extends Component {
   state = {
     cards : [],
-    clicked : []
+    clicked : [],
+    feedback : 'Don\'t click a Pepe twice!',
+    currentScore : 0,
+    highScore : 0
   }
 
   componentDidMount(){
@@ -17,17 +21,23 @@ class App extends Component {
 
   handleClick = (name) => {
     if(this.state.clicked.includes(name)) {
-      alert('you lose!')
+      this.setState({currentScore: 0, clicked: [], feedback: 'Wrong guess...'},
+        this.shuffleCards());
     }
     else {
       const currentClicked = this.state.clicked;
       currentClicked.push(name);
-      this.setState({clicked: currentClicked},
-        this.shuffleCards());
+      this.setState({clicked: currentClicked, currentScore: this.state.currentScore+1, feedback: 'Right guess!'},
+        () => { 
+          // if you gain score and its higher than the highscore, set highscore to score
+          if(this.state.highScore < this.state.currentScore)
+            this.setState({highScore: this.state.currentScore})
+          this.shuffleCards();
+        }
+      )
     }
-    console.log('Hello world: ', name);
   }
-
+  
   shuffleCards = () => {
     const newCards = shuffle(memImages);
     this.setState({cards: newCards});
@@ -35,8 +45,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        {this.state.cards.map((el, index) => <MemoryCard body={el} key={index} check={this.handleClick} />)}
+      <div className="app">
+        <NavBar feedback={this.state.feedback} currentScore={this.state.currentScore} highScore={this.state.highScore}/>
+        <CardContainer cards={this.state.cards} handleClick={this.handleClick}/>
       </div>
     );
   }

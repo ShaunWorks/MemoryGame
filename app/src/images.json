@@ -1,14 +1,38 @@
 [
     {
-        "image": "https://www.catster.com/wp-content/uploads/2018/05/A-gray-cat-crying-looking-upset.jpg",
-        "name": "Sad Cat"
+        "image": "http://www.stickpng.com/assets/images/5845cd230b2a3b54fdbaecf7.png",
+        "name": "FeelsBadMan"
     },
     {
-        "image": "https://img-aws.ehowcdn.com/750x428p/photos.demandstudios.com/getty/article/103/22/147674930.jpg",
-        "name": "Excited Cat"
+        "image": "https://pbs.twimg.com/profile_images/1018581545584451584/lhnG6SY8_400x400.jpg",
+        "name": "PepeHands"
     },
     {
-        "image": "https://ichef.bbci.co.uk/images/ic/720x405/p0517py6.jpg",
-        "name": "Hungry Cat"
+        "image": "https://cdn.vox-cdn.com/thumbor/_cyhoY8L8m4XQWXXgJs6VRMyGUs=/0x0:630x630/1200x0/filters:focal(0x0:630x630):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/10838133/feelsgoodman.jpg",
+        "name": "FeelsGoodMan"
+    },
+    {
+        "image": "https://i.imgur.com/uf9YNVm.png",
+        "name": "monkaS"
+    },
+    {
+        "image": "https://ih1.redbubble.net/image.531944912.8717/ap,550x550,12x12,1,transparent,t.u2.png",
+        "name": "HYPERS"
+    },
+    {
+        "image": "http://www.stickpng.com/assets/images/58486a72849cf46a2a931338.png",
+        "name": "AngryPepe"
+    },
+    {
+        "image": "https://socialmediaacademia.files.wordpress.com/2018/11/poggers.png",
+        "name": "Poggers"
+    },
+    {
+        "image": "https://ih1.redbubble.net/image.500694079.5027/ap,550x550,12x12,1,transparent,t.u2.png",
+        "name": "EZ"
+    },
+    {
+        "image": "https://i.imgur.com/aRSLBvO.jpg",
+        "name": "FeelsBirthdayMan"
     }
 ]
